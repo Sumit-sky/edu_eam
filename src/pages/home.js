@@ -8,18 +8,20 @@ import Footer from '../components/layout/footer'
 
 export default function Home() {
   const [active, setActive] = useState(0);
+  // const [isSidebarVisible, setIsSidebarVisible] = useState(true);
   return (
     <div className='bg-[#f4f6fa]'>
       <Navbar />
       <TopicScroller />
       <div className='flex w-full'>
         <Sidebar active={active} setActive={setActive} />
-        <div className='w-full'>
+        <div className={`w-full`}>
+          {/* ${isSidebarVisible ? 'ml-[100px]' : 'ml-0'}` */}
           <HomeSearch />
           <HomeCourses />
+          <Footer />
         </div>
       </div>
-      <Footer/>
-    </div>
+    </div >
   )
 }

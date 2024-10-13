@@ -19,7 +19,7 @@ export default function TopicScroller() {
   };
   return (
     // fixed top-[64px]
-    <div className="flex items-center bg-[#2c2c54] text-white">
+    <div className="flex items-center bg-[#2c2c54] text-white sticky top-[64px]">
       <button
         onClick={handlePrev}
         disabled={currentIndex === 0}
@@ -34,7 +34,7 @@ export default function TopicScroller() {
             <div key={topic.title} className="p-2">
               <a
                 href={topic.link}
-                className="mx-2 w-max text-nowrap hover:text-violet-500"
+                className="mx-2 w-max text-nowrap hover:text-gray-300"
               >
                 {topic.title}
               </a>

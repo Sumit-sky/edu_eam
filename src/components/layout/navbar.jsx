@@ -52,7 +52,7 @@ export default function Navbar() {
 
   return (
     // fixed
-    <nav className="w-full bg-[#1a1a2e] z-10"> 
+    <nav className="w-full bg-[#1a1a2e] z-10 fixed"> 
       <div className="flex justify-between items-center h-16 px-4 md:px-6">
         {isMobile ? (
           <>

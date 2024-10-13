@@ -5,7 +5,7 @@ import { BsGraphUpArrow } from "react-icons/bs";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function Sidebar({ active, setActive }) {
-  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarVisible(!isSidebarVisible);
@@ -15,7 +15,7 @@ export default function Sidebar({ active, setActive }) {
     if (window.innerWidth < 800) {
       setIsSidebarVisible(false);
     } else {
-      setIsSidebarVisible(true);
+      setIsSidebarVisible(false);
     }
   };
 
@@ -29,7 +29,7 @@ export default function Sidebar({ active, setActive }) {
 
   return (
     // fixed min-h-[100vh] top-[104px]
-    <div className="flex bg-[#2c2c54]">
+    <div className="flex bg-[#2c2c54] fixed min-h-[87vh] top-[104px] w-auto">
       {isSidebarVisible && (
         <div className="flex flex-col px-1 w-[120px]">
           <SidebarButton
@@ -74,7 +74,7 @@ export default function Sidebar({ active, setActive }) {
         style={{
           position: "absolute",
           left: isSidebarVisible ? "100px" : "0px",
-          top: "104px",
+          top: "0px",
           // 0px
         }}
         className="bg-white rounded-[100%] w-8 h-8 flex justify-center items-center"
